@@ -2,14 +2,68 @@
   box-sizing: border-box;
 }
 
+:root{
+  --maintheme: darkslategrey;
+  --highlight: aqua;
+
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Poppins', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
 }
 
-h1,
+/* Navigation CSS */
+/* CHECK OUT THIS CODE BELOW IF YOU WANT TO GET A REFRESHER ON FLEX */
+
+#navBar {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  justify-content: end;
+}
+
+#navBar h1 {
+  width: 25%;
+  font-weight: 500;
+}
+#navigation {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+#navigation p {
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: solid;
+  border-color: var(--maintheme);
+  border-width: 2px;
+}
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+}
+.icons img {
+  margin: 15px;
+  cursor: pointer;
+}
+.highlight {
+  color: #FF6200;
+  font-weight: 700;
+}
+
+/* Typography CSS */
+
+h1{
+  background-color:var(--maintheme);
+  color: var(--highlight);
+}
+
 h2,
 h3,
 h4,
@@ -20,4 +74,131 @@ h6 {
 
 p {
   margin: 0;
+}
+
+
+.mainProjectContainer
+{
+  /* We first create a flex layout context */
+    display: flex;
+  /* Then we define how is distributed the remaining space */
+    padding: 0;
+    margin: 0px;
+    height: 400px;
+    margin-bottom: 20px;
+    background-image: url("../images/mainpic.png");
+    border: solid;
+    border-width: 6px;
+    border-color: var(--maintheme);
+    align-items: end;
+    cursor: pointer;
+}
+
+.Projects {
+  display: flex;
+  height: 50px;
+  width: 200px;
+  color: var(--maintheme);
+  font-weight: bold;
+  background-size: cover;
+  border: 5px;
+  align-items: end;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  background-color: var(--highlight);
+  padding-left: 5px;
+
+}
+
+
+.portfolio-container {
+  margin-left: 300px;
+  justify-content: center;
+  margin-right: 5%;
+}
+
+
+.subProjectContainer
+{
+  /* We first create a flex layout context */
+   display: flex;
+
+  /* Then we define the flow direction 
+    and if we allow the items to wrap 
+  * Remember this is the same as:
+  * flex-direction: row;
+  * flex-wrap: wrap;
+  */
+   flex-flow: row wrap;
+  /* Then we define how is distributed the remaining space */ 
+   justify-content: center;
+   gap: 20px;
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   
+}
+
+.subProjectContainer > div 
+{
+  display: flex;
+  gap: 20px;
+  flex-basis: calc(50% - 10px);
+  height: 150px;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.subProjectContainer > div > h3
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.subProjects {
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  font-weight: bold;
+  background-size: cover;
+  border: solid;
+  justify-content: end;
+  border-width: 6px;
+  border-color: var(--maintheme);
+ 
+}
+
+.subproject1 {  
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+.subproject2 {
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+.subproject3 {
+  background-image: url("../images/02-portfolio-3.jpg");
+}
+
+.subproject4 {
+  background-image: url("../images/02-portfolio-4.jpg");
+}
+
+/*  Media query screen size change  */
+
+
+@media only screen and (max-width: 1000px) {
+  #navigation {
+    display: none;
+  }
+  .icons {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .subProjectContainer > div 
+  {
+  flex-basis: 100%;
+  }
 }
