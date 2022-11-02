@@ -1,18 +1,49 @@
 * {
   box-sizing: border-box;
+  
 }
 
-:root{
-  --maintheme: darkslategrey;
-  --highlight: aqua;
+a {
+  text-decoration: none;
+ color: inherit; } 
 
+a:link { text-decoration: none; color: none; }
+
+
+a:visited { text-decoration: none; color: none;}
+
+
+a:hover { text-decoration: none; color: none;}
+
+
+a:active { text-decoration: none; color: none;}
+
+
+:root{
+  --maintheme: rgb(35, 37, 37);
+  --highlight: lightskyblue;
+  --lighttext: rgb(161, 211, 241);
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
+  background-color: whitesmoke;
+  color: var(--maintheme);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--maintheme)
+}
+
+.link
+{
+  text-decoration:underline;
+  color:darkblue;
 }
 
 /* Navigation CSS */
@@ -21,40 +52,36 @@ body {
 #navBar {
   display: flex;
   flex-direction: row;
-  margin: 0px;
   justify-content: end;
 }
 
-#navBar h1 {
-  width: 25%;
-  font-weight: 500;
-}
 #navigation {
   display: flex;
-  width: 50%;
   justify-content: space-evenly;
+  padding: 0px;
 }
 
 #navigation p {
   cursor: pointer;
   text-decoration: none;
   border-bottom: solid;
-  border-color: var(--maintheme);
   border-width: 2px;
+  border-color: var(--highlight);
+  font-size: 1.1rem;
+  -webkit-transition: 0.5s ease-in-out;
+	transition: .4s ease-in-out;
 }
+
+#navigation p:hover {
+  background-color: var(--highlight); 
+  color: var(--maintheme);
+}
+
 .icons {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 25%;
-}
-.icons img {
-  margin: 15px;
-  cursor: pointer;
-}
-.highlight {
-  color: #FF6200;
-  font-weight: 700;
 }
 
 /* Typography CSS */
@@ -62,6 +89,25 @@ body {
 h1{
   background-color:var(--maintheme);
   color: var(--highlight);
+  padding-left: 0;
+  padding-right: 35%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px;
+  font-size: 1.6rem;
+
+}
+
+img {
+  display: flex;
+  height: 50px;
+  width: auto;
+  border-radius:40%;
+  margin-left: 30px;
+  border-color: var(--highlight);
+  border-width: 1px;
+  border: solid;
+  color: var(--lighttext);
 }
 
 h2,
@@ -73,25 +119,74 @@ h6 {
 }
 
 p {
-  margin: 0;
+  color: var(--highlight)
 }
 
+#navigation p {
+    margin: 20px;
+    color: var(--highlight)  
+}
+
+.hero-banner {
+  width: 100%;
+  height: 200px;
+background-image: url("../images/banner-image.jpg");
+display: flex;
+align-items: end;
+justify-content: end;
+}
+
+.hero-banner h2{
+  display:flex;
+  flex-basis: 10%;
+  color: white;
+  margin-bottom: 20px;
+  background-color: var(--highlight);
+  padding: 10px;
+  padding-right: 100%;
+}
+
+.page-section-container
+{
+  display: flex;
+  flex-flow: row;
+  align-items: space-between;
+  margin-top: 50px;
+}
+
+.subheading-container{
+  display: flex;
+  min-width: 300px;
+  border-color: var(--maintheme);
+  border-right: solid;
+  border-width: 5px;
+  justify-content: end;
+  padding-right: 50px;
+}
 
 .mainProjectContainer
 {
   /* We first create a flex layout context */
     display: flex;
   /* Then we define how is distributed the remaining space */
-    padding: 0;
+  padding: 0;
     margin: 0px;
     height: 400px;
     margin-bottom: 20px;
     background-image: url("../images/mainpic.png");
     border: solid;
     border-width: 6px;
-    border-color: var(--maintheme);
+    border-color: var(--highlight);
     align-items: end;
     cursor: pointer;
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.mainProjectContainer:hover
+{
+opacity: 0.5;
 }
 
 .Projects {
@@ -110,11 +205,15 @@ p {
 
 }
 
-
-.portfolio-container {
-  margin-left: 300px;
+.content-container {
+  display: flex;
+  flex-flow: column;
   justify-content: center;
-  margin-right: 5%;
+  margin-left: 30px;
+}
+
+.content-container p{
+  color: var(--maintheme)
 }
 
 
@@ -164,25 +263,61 @@ p {
   border: solid;
   justify-content: end;
   border-width: 6px;
-  border-color: var(--maintheme);
+  border-color: var(--highlight);
  
 }
 
+
+
 .subproject1 {  
   background-image: url("../images/02-portfolio-1.jpg");
+  opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
+
+.subproject1:hover {opacity: 0.5;}
 
 .subproject2 {
   background-image: url("../images/02-portfolio-2.jpg");
+  opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
+
+.subproject2:hover {opacity: 0.5;}
 
 .subproject3 {
   background-image: url("../images/02-portfolio-3.jpg");
+  opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
+
+.subproject3:hover {opacity: 0.5;}
 
 .subproject4 {
   background-image: url("../images/02-portfolio-4.jpg");
+  opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
+
+.subproject4:hover {opacity: 0.5;}
+
+.content-container-contact
+{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.content-container-contact h3{
+  display: flex;
+  color: var(--maintheme);
+}
+
+
 
 /*  Media query screen size change  */
 

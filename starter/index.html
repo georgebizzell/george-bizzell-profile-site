@@ -12,13 +12,14 @@
 <body>
   <!-- main logo / nav -->
   <header>
+    <img src="images/GBPic.jpg" alt="Profile photo of George Bizzell">
     <h1>George Bizzell</h1>
       <nav id="navBar">
         <div id="navigation">
-          <p>About Me</p>
-          <p>Work</p>
-          <p>Contact Me</p>
-          <p>Resume</p>
+          <p><a href="#aboutme"> About Me</a></p>
+          <p><a href="#work"> Work</a></p>
+          <p><a href="#contactme">Contact Me</a></p>
+          <p><a href="#resume">Resume</a></p>
         </div>
       </nav> 
     </nav>
@@ -27,36 +28,46 @@
   <!-- hero banner -->
   <section class="hero-banner">
     <div>
-      <h2>Product Manager</h2>
+      <h2>Bootcamp life</h2>
     </div>
   </section>
 
   <main class="page-wrapper">
     <!-- about me -->
-    <section class="page-section" id="about">
-      <h2>About Me</h2>
+    <section class="page-section-container">
+      <div class = "subheading-container">
+      <h2> <a id="aboutme">About Me</a></h2>
+    </div>
+      <div class="content-container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut odio nec purus auctor eleifend. Fusce vitae finibus augue, ut bibendum lorem. Vivamus porta metus mauris, nec blandit lacus pharetra sed. Nullam molestie turpis lorem, ut fringilla ipsum commodo sed. Duis nec aliquam justo. Vestibulum sollicitudin orci urna, vel viverra massa ultricies luctus. Integer sagittis eros ut lectus pretium rhoncus.</p>
+        <p>Vivamus venenatis bibendum consequat. Aliquam ornare mauris urna, ac tempor nisl sodales vel. Maecenas iaculis quis ante eu lacinia. Vestibulum eleifend ut lorem non pellentesque. Mauris rhoncus facilisis auctor. Sed a tortor placerat justo ullamcorper euismod et eu elit. Fusce ac mauris ipsum. Mauris elementum convallis eros, tempus commodo purus viverra sit amet. Nunc nec dolor nec lectus eleifend ornare. Morbi sollicitudin placerat aliquet. Cras urna nisl, efficitur ut placerat eleifend, tristique quis erat. Pellentesque vel massa sodales nisl porttitor rutrum eget quis ex. Sed ut enim id arcu tempor scelerisque et eget enim.</p>
+      </div>
     </section>
 
-    <!-- portfolio container -->
-    <section class="portfolio-container">
-      <h2>Work</h2>
+  <section class="page-section-container">
+    <div class = "subheading-container">
+      <h2><a id="work">Work</a></h2>
+    </div>
+    <div class="content-container">
       <div class="mainProjectContainer">
           <h3  class="Projects" >Site refactor</h3>
       </div>  
       <div class="subProjectContainer">
-          <div class="subProjects subproject1"><h3 class="hover Projects">The next big thing</h3></div>
+          <div class="subProjects subproject1"><h3 class="Projects">The next big thing</h3></div>
           <div class="subProjects subproject2"><h3 class="Projects">HTML expert</h3></div>
           <div class="subProjects subproject3"><h3 class="Projects">CSS wizard</h3></div>
           <div class="subProjects subproject4"><h3 class="Projects">Bootstrap ninja</h3></div>
       </div>
-      
     </section>
 
-    <!-- contact -->
-    <section class="page-section contact" id="contact">
-      <h2>Contact Me</h2>
+    <section class="page-section-container">
+      <div class = "subheading-container">
+        <h2><a id="contactme">Contact Me</a></h2>
+      </div>
+      <div class="content-container" class="content-container-contact">
+        <h3>555-555-555</h3>
+        <h3 class="link"> <a href="https://www.linkedin.com/in/georgebizzell" target="_blank">linkedin/georgebizzell</a></h3>
+        <h3>george12345@gmail.com</h3>
+        <h3>64 Zoo Lane, UK</h3>
+      </div>
     </section>
-  </main>
-</body>
-
-</html>
