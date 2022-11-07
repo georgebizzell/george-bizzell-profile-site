@@ -8,7 +8,7 @@ This profile site project will be updated and added to throughout the next 12 we
 
 ## End users
 
-The website is hoseted here: 
+The website is hosted here: 
 
 https://georgebizzell.github.io/george-bizzell-profile-site/starter/
 
