@@ -7,6 +7,8 @@ a {
   text-decoration: none;
  color: inherit; } 
 
+/* Removing normal link color behaviour for navbar items */
+
 a:link { text-decoration: none; color: none; }
 
 
@@ -18,6 +20,7 @@ a:hover { text-decoration: none; color: none;}
 
 a:active { text-decoration: none; color: none;}
 
+/* Setting variable colors */
 
 :root{
   --maintheme: rgb(35, 37, 37);
@@ -47,7 +50,6 @@ header {
 }
 
 /* Navigation CSS */
-/* CHECK OUT THIS CODE BELOW IF YOU WANT TO GET A REFRESHER ON FLEX */
 
 #navBar {
   display: flex;
@@ -98,18 +100,6 @@ h1{
 
 }
 
-img {
-  display: flex;
-  height: 50px;
-  width: auto;
-  border-radius:40%;
-  margin-left: 30px;
-  border-color: var(--highlight);
-  border-width: 1px;
-  border: solid;
-  color: var(--lighttext);
-}
-
 h2,
 h3,
 h4,
@@ -125,6 +115,19 @@ p {
 #navigation p {
     margin: 20px;
     color: var(--highlight)  
+}
+
+
+img {
+  display: flex;
+  height: 50px;
+  width: auto;
+  border-radius:40%;
+  margin-left: 30px;
+  border-color: var(--highlight);
+  border-width: 1px;
+  border: solid;
+  color: var(--lighttext);
 }
 
 .hero-banner {
@@ -164,25 +167,27 @@ justify-content: end;
   padding-right: 50px;
 }
 
+/* Create a flex layout context for the large main project container*/
+
 .mainProjectContainer
 {
-  /* We first create a flex layout context */
-    display: flex;
-  /* Then we define how is distributed the remaining space */
+  display: flex;
   padding: 0;
-    margin: 0px;
-    height: 400px;
-    margin-bottom: 20px;
-    background-image: url("../images/mainpic.png");
-    border: solid;
-    border-width: 6px;
-    border-color: var(--highlight);
-    align-items: end;
-    cursor: pointer;
-    opacity: 1;
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+  margin: 0px;
+  height: 400px;
+  margin-bottom: 20px;
+  background-image: url("../images/mainpic.png");
+  border: solid;
+  border-width: 6px;
+  border-color: var(--highlight);
+  align-items: end;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
+
+/* Fading aninmation for the main project image */
 
 .mainProjectContainer:hover
 {
@@ -216,12 +221,12 @@ opacity: 0.5;
   color: var(--maintheme)
 }
 
+/* Smaller project container for all 4 subprojects */
 
 .subProjectContainer
 {
   display: flex;
   flex-flow: row wrap;
-  /* Then we define how is distributed the remaining space */ 
   justify-content: center;
   gap: 20px;
   padding: 0;
@@ -258,7 +263,7 @@ opacity: 0.5;
  
 }
 
-/* Subproject classes */
+/* 4 subproject classes with different images and hover behaviour*/
 
 .subproject1 {  
   background-image: url("../images/02-portfolio-1.jpg");
