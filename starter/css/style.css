@@ -156,7 +156,7 @@ justify-content: end;
 
 .subheading-container{
   display: flex;
-  min-width: 300px;
+  min-width: 200px;
   border-color: var(--maintheme);
   border-right: solid;
   border-width: 5px;
@@ -219,23 +219,14 @@ opacity: 0.5;
 
 .subProjectContainer
 {
-  /* We first create a flex layout context */
-   display: flex;
-
-  /* Then we define the flow direction 
-    and if we allow the items to wrap 
-  * Remember this is the same as:
-  * flex-direction: row;
-  * flex-wrap: wrap;
-  */
-   flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
   /* Then we define how is distributed the remaining space */ 
-   justify-content: center;
-   gap: 20px;
-   padding: 0;
-   margin: 0;
-   list-style: none;
-   
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;  
 }
 
 .subProjectContainer > div 
@@ -267,7 +258,7 @@ opacity: 0.5;
  
 }
 
-
+/* Subproject classes */
 
 .subproject1 {  
   background-image: url("../images/02-portfolio-1.jpg");
